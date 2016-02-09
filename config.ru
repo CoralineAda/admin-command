@@ -10,7 +10,7 @@ post "/" do
     halt 401
   end
 
-  message = "Message from #{params["user_name"]} in ##{params["channel_name"]}:\n\n#{params["text"]}"
+  message = "@here: Message from #{params["user_name"]} in ##{params["channel_name"]}:\n\n#{params["text"]}"
 
   webhook_body = JSON.dump({ "text" => message })
 
